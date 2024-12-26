@@ -1,46 +1,55 @@
-# Wetterstation mit Arduino
-<img src="../images/assembly/bild1.jpg" width="40%">   <img src="../images/assembly/bild2.jpg" width="40%">
+# Desklamp
+A desk lamp that is based on an ESP32 and uses an LED strip as a light source
+<img src="../image/Screenshot 2024-12-26 024602.png" width="40%">
 
-Dieses Arduino-Projekt implementiert eine Wetterstation, die die Sensoren BME680 und BME280 verwendet, um verschiedene Umweltparameter wie Temperatur, Luftfeuchtigkeit, Luftdruck und Gaswiderstand zu messen. Die gemessenen Daten werden auf einem E-Paper-Display angezeigt.
+This repository documents the development and control of a desk and ambient lamp. The lamp combines functional lighting for the work area with atmospheric light modes for a pleasant room ambience.
 
-## Komponenten
+## Components  
 
-### Verwendete Hardware
-| name | description | Image |
-| --- | --- | --- |
-| **BME688 Sensor**  | Ein Umweltsensor, der Temperatur, Luftfeuchtigkeit, Luftdruck und Gaswiderstand misst.  |<img src="../images/components/bme688.jpg" height="70px">|
-| **BME280 Sensor**  | Ein weiterer Umweltsensor, der Temperatur, Luftfeuchtigkeit und Luftdruck misst.  |<img src="../images/components/bme280.jpg" height="70px">|
-| **E-Paper Display**  | GxEPD2 Library zur Ansteuerung eines E-Paper-Displays mit SSD1680 Controller.  |<img src="../images/components/e-paper.jpg" height="70px">|
-| **ESP32**  | Seeed Studio XIAO ESP32S3  |<img src="../images/components/esp32.jpg" height="70px">|
-| **Battery Shield**  | Battery Shield für eine 18650 Battery.  |<img src="../images/components/battery-shield.jpg" height="70px">|
+### Hardware Used  
+| Name                  | Description                                                                                            | Image                                         |  
+|-----------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------------|  
+| **RGBW LED Strip**    | An RGBW LED strip providing vibrant colors and adjustable white tones.                                 | <img src="../images/components/rgbw-led.jpg" height="70px"> |  
+| **ESP32**             | Seeed Studio XIAO ESP32S3 for controlling the lamp and enabling smart features.                       | <img src="../images/components/esp32.jpg" height="70px"> |
 
+### Libraries Used  
+- **Wire.h**: Standard Arduino library for I2C communication.  
+- **Adafruit_NeoPixel.h**: For controlling the RGBW LED strip.  
+- **Adafruit_Sensor.h**: General-purpose library for interacting with sensors.  
+- **Adafruit_LightSensor.h**: Library for ambient light sensor communication.  
+- **Servo.h** (optional): Used for any mechanical features, such as adjustable lamp angles.  
+- **MQTT.h**: For Smart Home integrations via MQTT protocol.  
 
-### Verwendete Bibliotheken
-- **Wire.h**: Standard Arduino Bibliothek für die I2C-Kommunikation.
-- **Adafruit_Sensor.h**: Adafruit Sensor Bibliothek für die Sensoransteuerung.
-- **Adafruit_BME680.h**: Adafruit Bibliothek für den BME680 Sensor.
-- **GxEPD2_BW.h**: GxEPD2 Bibliothek für die Ansteuerung von E-Paper-Displays.
-- **Adafruit_GFX.h**: Adafruit Grafikbibliothek für die Anzeige auf dem E-Paper-Display.
-- **BME280I2C.h**: Bibliothek für die I2C-Kommunikation mit dem BME280 Sensor.
-- **Fonts/FreeMonoBold12pt7b.h**: Schriftart für die Anzeige auf dem E-Paper-Display.
+## Assembly Instructions  
 
+### Wiring Diagram  
+<img src="../images/wire-diagram.png" width="30%">  
 
-### Installation
-1. **Arduino IDE**: Stelle sicher, dass die Arduino Integrated Development Environment (IDE) installiert ist.
-2. **Bibliotheken**: Installiere die oben aufgeführten Bibliotheken in der Arduino IDE über den Bibliotheksmanager.
+Connect the components following the wiring diagram to enable full functionality, including smart features and motion-based lighting.  
 
+### 3D-Printed Case  
+You can enhance the aesthetics of your desk lamp by using a custom 3D-printed enclosure.  
+- **Download the 3D model here:** [3D model file](3dmodel)  
+- **Preview:**  
+<img src="../images/components/lamp-case.png" width="50%">  
 
-## Schaltungsaufbau
-<img src="../images/wire-diagram.png" width="30%">
+## Installation Instructions  
 
+1. **Setup Arduino IDE**:  
+   - Install the [Arduino IDE](https://www.arduino.cc/en/software) if you haven't already.  
 
-## 3D-Druck für Gehäuse
-Das Gehäuse für die Wetterstation kann über folgenden Link heruntergeladen werden: [Link zur 3D-Druck Datei](3dmodel).
-<img src="../images/components/gehaeuse.png" width="50%">
+2. **Install Libraries**:  
+   - Open the Arduino Library Manager and search for the libraries listed above to install them.  
 
+3. **Flash Firmware**:  
+   - Upload the firmware from the `/firmware` directory onto your ESP32 using the Arduino IDE or PlatformIO.  
 
-## Lizenz
-Dieses Projekt ist unter der [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/) lizenziert. Das bedeutet, dass du das Material teilen und bearbeiten kannst, solange du es nicht für kommerzielle Zwecke nutzt und mich als Urheber angibst.
+4. **Assemble the Lamp**:  
+   - Connect all components as described in the wiring diagram and place them in the 3D-printed case.  
 
----
-Autor: [Instagram](https://www.instagram.com/james__hi/)   [Youtube](https://www.youtube.com/@Jakobhaidlauf)
+## License  
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/). You may share and adapt this material for non-commercial purposes with appropriate attribution.  
+
+---  
+
+Author: [Instagram](https://www.instagram.com/j.kob.h/) | [YouTube](https://www.youtube.com/@jkobh)
