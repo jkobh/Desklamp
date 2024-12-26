@@ -7,11 +7,11 @@ This repository documents the development and control of a desk and ambient lamp
 ## Components  
 
 ### Hardware Used  
-| Name                  | Description                                                                                            | Image                                         |  
+| Name | Description | Image |
 |-----------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------------|  
-| **RGBW LED Strip** | An RGBW LED strip providing vibrant colors and adjustable white tones. | <img src="../image/components/LED_stripes.png" height="70px"> |  
-| **ESP32** | Seeed Studio XIAO ESP32S3 for controlling the lamp and enabling smart features. | <img src="../image/components/esp32_dev.png" height="70px"> |  
-| **Push Button Switch** | An Button to turn the lamp on/off and to switch mode  |  <img src="../image/components/button.png" height="70px"> |
+| **RGBW LED Strip** | An RGBW LED strip providing vibrant colors and adjustable white tones.[AliExpress](https://de.aliexpress.com/item/1005007011130121.html) | <img src="../image/components/LED_stripes.png" height="70px"> |  
+| **ESP32** | Seeed Studio XIAO ESP32S3 for controlling the lamp and enabling smart features.[AliExpress](https://de.aliexpress.com/item/1005006336964908.html) | <img src="../image/components/esp32_dev.png" height="70px"> |  
+| **Push Button Switch** | An Button to turn the lamp on/off and to switch mode[AliExpress](https://www.aliexpress.com/item/1005004920346156.html) | <img src="../image/components/button.png" height="70px"> |
 
 ### Libraries Used  
 - **Arduino.h**: for millis() and random().
@@ -26,7 +26,7 @@ This repository documents the development and control of a desk and ambient lamp
 ### 3D-Printed Case
 - **Download the 3D model here:** [3D model file](3dmodel)
 - **Preview:**  
-<img src="../image/3dprint/top_006.png" width="25%"><img src="../image/3dprint/main_006.png" width="25%"><img src="../image/3dprint/base_006.png" width="25%"><img src="../image/3dprint/cover_006.png" width="25%">
+<img src="../image/3dprint/top_006.png" height="100px"><img src="../image/3dprint/main_006.png" height="100px"><img src="../image/3dprint/base_006.png" height="100px"><img src="../image/3dprint/cover_006.png" height="100px">
 
 ## Installation Instructions  
 
